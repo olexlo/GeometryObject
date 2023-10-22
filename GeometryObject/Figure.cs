@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace GeometryObject
 {
     internal class Figure
-    {
+    {  
     }
     internal class Line : Figure
     {
