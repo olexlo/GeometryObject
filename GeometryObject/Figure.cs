@@ -32,5 +32,6 @@ namespace GeometryObject
     }
     internal class Triagle : Line 
     {
+
     }
 }
