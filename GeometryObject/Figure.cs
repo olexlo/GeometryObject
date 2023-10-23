@@ -11,7 +11,7 @@ namespace GeometryObject
         public string Name_Figure { get; set; }
         public int AmoutSides { get; set; }
         
-        public Figures(string name_Figure, int amoutSides)
+        public Figure (string name_Figure, int amoutSides)
         {
             Name_Figure = name_Figure;
             AmoutSides = amoutSides;
@@ -20,9 +20,9 @@ namespace GeometryObject
     internal class Polygon : Figure
     {
         public double[] Sides { get; set; }
-        public Polygons (AmoutSides)
+        public Polygon (int numberOfSides)
         {
-            Sides = new double[AmoutSides];
+            Sides = new double[numberOfSides];
         }
 
         public void SetSides()
@@ -55,6 +55,7 @@ namespace GeometryObject
     }
     internal class Parallelepiped : Polygon 
     {
+        public double[] Sides { get; set; }
         public static double Perimeter(Sides)
         {
             double a;
