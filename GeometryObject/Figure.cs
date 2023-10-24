@@ -35,25 +35,26 @@ namespace GeometryObject
                 Sides[i] = Convert.ToDouble(Console.ReadLine());
             }
         }
-
-        public static double Perimeter(double a)
-        {
-            return a * 4;
-        }
-        }
-
         public void PrintFigure(string math_operation,double result) 
         {
+            Console.WriteLine($"Результат математичної {math_operation} {Name_Figure} буде дорівнювати {result}");
+        }
     }
-    internal class Radius : Figure 
+    internal sealed class Circle : Polygon
     {
-
+        public Circle() : base("Circle", 1) 
+        {
+        }
+        public double Perimeter()
+        {
+            return 2 * Math.PI * Sides[0];
+        }
+        public double Area() 
+        {
+            return Math.PI * Math.Pow(Sides[0], 2);
+        }
     }
-    internal class Circle : Radius
-    {
-    }
-    }
-    internal class Parallelepiped : Polygon 
+    internal sealed class Parallelepiped : Polygon 
     {
         public Parallelepiped():base("Parallelepiped",2) 
         {
@@ -65,11 +66,11 @@ namespace GeometryObject
             {
                 a =+ Sides[i];
             }
-            return a;
+            return a*2;
         }
-    }
-    internal class VolumeParallel : Parallelepiped 
-    {
-    }
+        public double Area() 
+        {
+            return Sides[0] * Sides[1];
+        }
     }
 }
