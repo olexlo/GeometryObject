@@ -40,15 +40,10 @@ namespace GeometryObject
         {
             return a * 4;
         }
-        public static double Perimeter(double a, double b, double c)
-        {
-            return a + b + c;
         }
 
         public void PrintFigure(string math_operation,double result) 
         {
-            Console.WriteLine($"Результат математичної {math_operation} {Name_Figure} буде дорівнювати {result}");
-        }
     }
     internal class Radius : Figure 
     {
@@ -57,12 +52,9 @@ namespace GeometryObject
     internal class Circle : Radius
     {
     }
-    internal class Ellipse : Radius 
-    {
     }
     internal class Parallelepiped : Polygon 
     {
-        //public double[] Sides { get; set; }
         public Parallelepiped():base("Parallelepiped",2) 
         {
         }        
@@ -79,17 +71,5 @@ namespace GeometryObject
     internal class VolumeParallel : Parallelepiped 
     {
     }
-    internal class Square : Parallelepiped 
-    {
-    }
-    internal class Trapezoid : Parallelepiped 
-    {
-    }
-    internal class Polyhedron : Parallelepiped 
-    {
-    }
-    internal class Triagle : Polygon 
-    {
-
     }
 }
