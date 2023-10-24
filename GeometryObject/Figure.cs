@@ -37,7 +37,7 @@ namespace GeometryObject
         }
         public void PrintFigure(string math_operation,double result) 
         {
-            Console.WriteLine($"Результат математичної {math_operation} {Name_Figure} буде дорівнювати {result}");
+            Console.WriteLine($"Результат математичної розрахунку {math_operation} фігури {Name_Figure} буде дорівнювати {result}");
         }
     }
     internal sealed class Circle : Polygon
@@ -64,7 +64,7 @@ namespace GeometryObject
             double a=0;
             for (int i = 0; i < Sides.Length; i++)
             {
-                a =+ Sides[i];
+                a += Sides[i];
             }
             return a*2;
         }

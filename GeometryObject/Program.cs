@@ -4,10 +4,13 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
-            var a = new Figure("Cu",5);
             Parallelepiped parallelepiped = new Parallelepiped();
-            parallelepiped.PrintFigure("Периметр",parallelepiped.Perimeter());
+            parallelepiped.PrintFigure("Периметр", parallelepiped.Perimeter());
+            parallelepiped.PrintFigure("Площа", parallelepiped.Area());
+
+            Circle circle = new Circle();
+            circle.PrintFigure("Периметр", circle.Perimeter());
+            circle.PrintFigure("Площа", circle.Area());
         }
     }
 }
